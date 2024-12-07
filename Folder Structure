@@ -1,0 +1,7 @@
+website-cloner/
+│
+├── templates/         # HTML files for Flask
+├── static/            # CSS, JavaScript, and images
+├── app.py             # Main Python file
+├── requirements.txt   # Dependencies
+├── README.md          # Project documentation
