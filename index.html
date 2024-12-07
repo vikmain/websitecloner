@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Website Cloner</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-image: url("{{ url_for('static', filename='images/vclone.jpg') }}");
+            /* Replace 'background.jpg' with your image path */
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            height: 100vh;
+            color: #fff;
+        }
+        form {
+            background: rgba(0, 0, 0, 0.7); /* Semi-transparent black background for form */
+            padding: 20px;
+            border-radius: 10px;
+            max-width: 400px;
+            margin: 50px auto;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+        }
+        input, button {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: none;
+            border-radius: 5px;
+        }
+        button {
+            background-color: #007BFF;
+            color: white;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <h1 style="text-align: center; margin-top: 20px;">Website Cloner</h1>
+    <form action="/clone" method="POST">
+        <label for="url">Enter Website URL:</label>
+        <input type="text" id="url" name="url" placeholder="https://example.com" required>
+        <br><br>
+        <label for="path">Select Memory Location (Folder Path):</label>
+        <input type="text" id="path" name="path" placeholder="C:/Users/YourName/Downloads" required>
+        <br><br>
+        <button type="submit">Clone Website</button>
+    </form>
+</body>
+</html>
